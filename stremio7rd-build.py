@@ -32,9 +32,12 @@ def generate_manifest(version):
     }
 
 @app.route("/")
+def root_redirect():
+    return redirect('/configure')
+
+@app.route("/configure")
 def configure_page():
-    """Serve the index.html file."""
-    return render_template("index.html", LATEST_VERSION=LATEST_VERSION)
+    return render_template("configure.html", LATEST_VERSION=LATEST_VERSION)
 
 @app.route("/manifest.json")
 def default_manifest():
