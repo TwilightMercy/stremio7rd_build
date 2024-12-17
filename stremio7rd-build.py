@@ -3,8 +3,8 @@ from flask import Flask, jsonify, redirect
 app = Flask(__name__)
 
 ################################################################
-# Constants   
-LATEST_VERSION = "1.0.1"
+# Constants
+LATEST_VERSION = "1.0.2"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_DOWN_URL = "https://i.imgur.com/gY4MWuf.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/ntwsGcb.png"
