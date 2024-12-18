@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, redirect, render_template
 
 app = Flask(__name__)
-
+app.json.sort_keys = False
 ################################################################
 # Constants
 LATEST_VERSION = "1.0.1"
@@ -19,9 +19,9 @@ def generate_manifest(version):
         "version": version,
         "name": f"Stremio + Real Debrid Israel Build",
         "description": f"Stremio + Real Debrid Israel Build Version Check.",
+        "logo": STREMIO7RD_URL,
         "resources": ["catalog"],
         "types": ["other"],
-        "logo": STREMIO7RD_URL,
         "catalogs": [
             {
                 "type": "other",
@@ -29,6 +29,9 @@ def generate_manifest(version):
                 "name": "Stremio + Real Debrid Israel ברוכים הבאים לבילד של"
             }
         ],
+        "behaviorHints": {
+            "configurable": True
+        }
     }
 
 @app.route("/")
