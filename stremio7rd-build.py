@@ -30,7 +30,8 @@ def generate_manifest(version):
             }
         ],
         "behaviorHints": {
-            "configurable": True
+            "configurable": True,
+            "configurationRequired": True
         }
     }
 
