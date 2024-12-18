@@ -39,6 +39,7 @@ def root_redirect():
     return redirect('/configure')
 
 @app.route("/configure")
+@app.route("/<current_version>/configure")
 def configure_page():
     return render_template("configure.html", LATEST_VERSION=LATEST_VERSION)
 
