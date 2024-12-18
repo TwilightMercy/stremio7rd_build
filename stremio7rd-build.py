@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.json.sort_keys = False
 ################################################################
 # Constants
-LATEST_VERSION = "3.0.1"
+LATEST_VERSION = "2.0.0"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_DOWN_URL = "https://i.imgur.com/gY4MWuf.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/ntwsGcb.png"
