@@ -14,6 +14,10 @@
 
         <!-- Improved version display with styles -->
         <div class="version-display-container">
+            {% if CURRENT_VERSION is not none %}
+                <p class="version-title">גרסה מותקנת:</p>
+                <p class="version-value" id="version-display">{{ CURRENT_VERSION }}</p>
+            {% endif %}
             <p class="version-title">גרסה אחרונה:</p>
             <p class="version-value" id="version-display">{{ LATEST_VERSION }}</p>
         </div>

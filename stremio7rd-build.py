@@ -41,7 +41,7 @@ def root_redirect():
 @app.route("/configure")
 @app.route("/<current_version>/configure")
 def configure_page(current_version=None):
-    return render_template("configure.html", LATEST_VERSION=LATEST_VERSION)
+    return render_template("configure.html", CURRENT_VERSION=current_version, LATEST_VERSION=LATEST_VERSION)
 
 @app.route("/manifest.json")
 def default_manifest():
