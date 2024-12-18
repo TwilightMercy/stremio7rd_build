@@ -2,11 +2,11 @@ const stremioLink = `${window.location.host}/${window.LATEST_VERSION}/manifest.j
 console.log(stremioLink)
 
 const installAddon = async () => {
-    window.open(`stremio://${stremioLink}`, "_blank");
+    window.location.href = `stremio://${stremioLink}`;
 };
 
 const copyConfig = async () => {
-    await navigator.clipboard.writeText(`http://${stremioLink}`);
+    await navigator.clipboard.writeText(`https://${stremioLink}`);
     alert("הקישור הועתק בהצלחה!\nהדבק את הקישור בחיפוש בעמוד ה-Addons.");
 };
 
