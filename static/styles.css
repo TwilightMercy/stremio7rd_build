@@ -227,3 +227,26 @@ label[for="selectedDebridService"] {
     font-weight: bold;
     margin-bottom: 5px;
 }
+.show-catalog-container {
+    display: flex;
+    flex-direction: column; /* Stack label and radio buttons vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin-bottom: 15px;
+}
+.radio-buttons {
+    display: flex;
+    gap: 15px; /* Space between radio buttons */
+    justify-content: center; /* Center the radio buttons horizontally */
+}
+input[type="radio"] {
+    margin-right: 5px; /* Space between radio button and label text */
+    cursor: pointer;
+}
+.radio-buttons label {
+    font-size: 16px; /* Size for the radio button labels */
+    color: #e0e0e0; /* Light color */
+}
+input[type="radio"]:checked {
+    accent-color: #4CAF50; /* Green color for the selected radio button */
+}

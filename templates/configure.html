@@ -22,6 +22,18 @@
             <p class="version-value" id="version-display">{{ LATEST_VERSION }}</p>
         </div>
         
+        <div class="show-catalog-container">
+            <label for="showCatalogRadio">הצג חיווי במסך הבית גם כשהבילד מעודכן:</label>
+            <div class="radio-buttons" id="showCatalogRadio">
+                <label>
+                    <input type="radio" name="showCatalog" value="yes" {% if SHOW_CATALOG_EVEN_IF_UPDATED %} checked {% endif %}> כן
+                </label>
+                <label>
+                    <input type="radio" name="showCatalog" value="no" {% if not SHOW_CATALOG_EVEN_IF_UPDATED %} checked {% endif %}> לא
+                </label>
+            </div>
+        </div>
+
         <form id="stremioForm">
             <div class="button-group">
                 <button type="button" id="installButton" onclick="installAddon()">התקן</button>
@@ -33,6 +45,7 @@
     <script>
         // Pass LATEST_VERSION to the external script
         window.LATEST_VERSION = "{{ LATEST_VERSION }}";  // Set global JS variable
+        window.SHOW_CATALOG_EVEN_IF_UPDATED = "{{ SHOW_CATALOG_EVEN_IF_UPDATED }}";  // Set global JS variable
     </script>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
